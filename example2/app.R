@@ -64,6 +64,8 @@ odin_compare_server <- function() {
                                     vis = vis, batch = batch)
     state <- shiny::callModule(
       odin.ui:::mod_state_server, "state", modules, "prototype")
+    status <- shiny::callModule(
+      odin.ui:::mod_status_server, "status", list(edit = model2$result))
   }
 }
 
