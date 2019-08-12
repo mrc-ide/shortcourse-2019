@@ -27,7 +27,7 @@ odin_stochastic_ui <- function() {
           icon = shiny::icon("search"),
           odin.ui:::mod_vis_ui("vis")),
         shiny::tabPanel(
-          "Batch",
+          "Sensitivity",
           icon = shiny::icon("bars"),
           odin.ui:::mod_batch_ui("batch"))
       )))

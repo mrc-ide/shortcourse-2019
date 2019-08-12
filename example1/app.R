@@ -25,7 +25,7 @@ odin_basic_ui <- function(initial_code) {
         icon = shiny::icon("search"),
         odin.ui:::mod_vis_ui("odin_vis")),
       shiny::tabPanel(
-        "Batch",
+        "Sensitivity",
         icon = shiny::icon("bars"),
         odin.ui:::mod_batch_ui("odin_batch")),
       shiny::tabPanel(

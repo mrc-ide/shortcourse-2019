@@ -33,7 +33,7 @@ odin_compare_ui <- function() {
           icon = shiny::icon("search"),
           odin.ui:::mod_vis_compare_ui("vis")),
         shiny::tabPanel(
-          "Batch",
+          "Sensitivity",
           icon = shiny::icon("bars"),
           odin.ui:::mod_batch_compare_ui("batch")),
         shiny::tabPanel(
