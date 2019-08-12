@@ -19,9 +19,9 @@ odin_stochastic_ui <- function() {
         id = "odin_ui_navvar",
         inverse = FALSE,
         shiny::tabPanel(
-          "Base",
+          "Code",
           icon = shiny::icon("align-justify"),
-          odin.ui:::mod_model_static_ui("model", title = "Model")),
+          odin.ui:::mod_model_static_ui("model")),
         shiny::tabPanel(
           "Visualise",
           icon = shiny::icon("search"),

@@ -23,7 +23,7 @@ odin_compare_ui <- function() {
         shiny::tabPanel(
           "Base",
           icon = shiny::icon("align-justify"),
-          odin.ui:::mod_model_static_ui("model1", title = "Base model")),
+          odin.ui:::mod_model_static_ui("model1")),
         shiny::tabPanel(
           "Editor",
           icon = shiny::icon("edit"),
