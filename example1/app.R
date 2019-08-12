@@ -5,12 +5,12 @@ if (file.exists("../../DESCRIPTION")) {
 loadNamespace("odin.ui")
 
 odin_basic <- function(initial_code) {
-  shiny::shinyApp(ui = odin_basic_ui(initial_code),
+  shiny::shinyApp(ui = odin_basic_ui(),
                   server = odin_basic_server(initial_code))
 }
 
 
-odin_basic_ui <- function(initial_code) {
+odin_basic_ui <- function() {
   shiny::shinyUI(
     shiny::navbarPage(
       "odin editor",
@@ -19,7 +19,7 @@ odin_basic_ui <- function(initial_code) {
       shiny::tabPanel(
         "Editor",
         icon = shiny::icon("edit"),
-        odin.ui:::mod_editor_simple_ui("odin_editor", initial_code, NULL)),
+        odin.ui:::mod_editor_simple_ui("odin_editor")),
       shiny::tabPanel(
         "Visualise",
         icon = shiny::icon("search"),

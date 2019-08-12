@@ -11,8 +11,6 @@ odin_compare <- function() {
 
 
 odin_compare_ui <- function() {
-  initial_code <- readLines("models/malaria_model.R")
-
   shiny::shinyUI(
     shiny::tagList(
       odin.ui:::odin_css(),
@@ -27,7 +25,7 @@ odin_compare_ui <- function() {
         shiny::tabPanel(
           "Editor",
           icon = shiny::icon("edit"),
-          odin.ui:::mod_editor_simple_ui("model2", initial_code, NULL)),
+          odin.ui:::mod_editor_simple_ui("model2")),
         shiny::tabPanel(
           "Visualise",
           icon = shiny::icon("search"),
@@ -54,7 +52,7 @@ odin_compare_server <- function() {
 
     model2 <- shiny::callModule(
       odin.ui:::mod_editor_simple_server, "model2",
-      readLines("models/malaria_model.R"),
+      readLines("models/malaria_model_latency.R"),
       "Return to the Editor tab")
     ## TODO: it should be possible to accept data here too (currently
     ## requires data missing and run_options sets control_end_time =
