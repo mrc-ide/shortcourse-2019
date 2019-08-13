@@ -28,3 +28,5 @@ n_recoveries <- rbinom(I, nu * dt)
 update(I) <- I + n_infections - n_recoveries
 output(S) <- TRUE
 output(time) <- TRUE
+
+output(extinct) <- I == 0
