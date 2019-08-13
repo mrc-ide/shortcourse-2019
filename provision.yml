@@ -2,4 +2,4 @@ packages:
   - odin.ui
 package_sources:
   github:
-  - mrc-ide/odin.ui@update
+  - mrc-ide/odin.ui@interface-issues
