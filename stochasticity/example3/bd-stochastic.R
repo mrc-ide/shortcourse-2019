@@ -1,5 +1,5 @@
-r <- user(0.5) # Growth rate
-s <- user(0.3) # Death rate
+r <- user(0.1) # Growth rate
+s <- user(0.06) # Death rate
 N0 <- user(1) # Initial number
 
 dt <- 0.01 

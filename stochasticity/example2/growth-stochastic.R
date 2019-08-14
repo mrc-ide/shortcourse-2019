@@ -1,4 +1,4 @@
-r <- user(0.5) # growth rate
+r <- user(0.1) # growth rate
 N0 <- user(1)  # initial population.
 
 dt <- 0.01
