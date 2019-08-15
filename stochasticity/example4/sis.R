@@ -1,6 +1,6 @@
 beta <- user(0.5) # contact rate
 nu <- user(0.3) # recovery
-N <- user(100)  # total population.
+N <- user(1000)  # total population.
 
 I0_at_steady_state <- user(1)
 
