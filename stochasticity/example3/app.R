@@ -1,7 +1,7 @@
-if (file.exists("../../DESCRIPTION")) {
-  devtools::load_all("../..", export_all = FALSE, helpers = FALSE,
+if (file.exists("../../../DESCRIPTION")) {
+  devtools::load_all("../../..", export_all = FALSE, helpers = FALSE,
                      attach_testthat = FALSE)
 }
 loadNamespace("odin.ui")
 
-odin.ui:::odin_stochastic("sis.R")
+odin.ui:::odin_stochastic("sis.R", "doc.md")
