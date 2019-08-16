@@ -4,4 +4,4 @@ if (file.exists("../../DESCRIPTION")) {
 }
 loadNamespace("odin.ui")
 
-odin.ui:::odin_stochastic("bd-stochastic.R")
+odin.ui:::odin_stochastic("sis.R")
