@@ -11,7 +11,7 @@ find_root <- function(args = commandArgs()) {
 
 reload <- function(root) {
   paths <- dirname(list.files(root, recursive = TRUE, pattern = "^app.R$"))
-  ok <- file.create(file.path(root, paths, "reload.txt"))
+  ok <- file.create(file.path(root, paths, "restart.txt"))
   if (any(ok)) {
     message(sprintf("Reloaded %d apps:\n%s",
                     sum(ok), paste("  -", paths[ok], collapse = "\n")))
@@ -24,7 +24,7 @@ reload <- function(root) {
 
 
 clear <- function(root) {
-  paths <- list.files(root, recursive = TRUE, pattern = "^reload.txt$",
+  paths <- list.files(root, recursive = TRUE, pattern = "^restart.txt$",
                       full.names = TRUE)
   unlink(paths)
   message(sprintf("Removed %d reload files", length(paths)))
