@@ -31,15 +31,33 @@ clear <- function(root) {
 }
 
 
-main <- function(root = find_root()) {
-  args <- commandArgs(TRUE)
+parse_args <- function(args) {
   if (length(args) == 0) {
-    reload(root)
+    clear <- FALSE
   } else if (identical(args, "--clear")) {
+    clear <- TRUE
+  } else {
+    stop("Usage:\n  reload [--clear]")
+  }
+  list(clear = clear)
+}
+
+
+die <- function(msg) {
+  message(msg)
+  q(save = "no", status = 1)
+}
+
+
+main <- function(args = commandArgs(TRUE), root = find_root()) {
+  opts <- tryCatch(
+    parse_args(args),
+    error = function(e) die(e$message))
+  message("Working in ", root)
+  if (opts$clear) {
     clear(root)
   } else {
-    message("Usage:\n  reload [--clear]")
-    q(save = "no", status = 1)
+    reload(root)
   }
 }
 
