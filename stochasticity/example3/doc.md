@@ -3,8 +3,8 @@
 In the next example we consider a model of infection transmission within a closed popluation (no births or deaths): the susceptible-infected-susceptible (SIS) model.
 
 In this model we consider two types of event:
-	Infection events, which occur in each time step with probability $((\beta  I dt)/N\)$ per susceptible individual, and
-	Recovery events, which occur in each time step with a probability $(\nu  dt\)$ per infected individual.
+	Infection events, which occur in each time step with probability $((\beta  I dt)/N)$ per susceptible individual, and
+	Recovery events, which occur in each time step with a probability $(\nu~dt)$ per infected individual.
 
 The ODE representation of the model is:
 

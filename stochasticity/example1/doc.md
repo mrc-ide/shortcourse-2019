@@ -12,4 +12,4 @@ where \(N(0)\) is the initial population at time \(t = 0\).
 
 For a stochastic simulation, the probability that an individual gives birth in a short time, \(dt\), is given by \(r dt \). The same probability applies to each of the \( N \) individuals. Hence the number of new births will be binomially distributed:
 
-$$ \mbox{births in time } dt \sim \mathrm{Binomial}(N, rdt) $$
+$$ \mbox{births in time } dt \sim \mathrm{Binomial}(N, r~dt) $$
